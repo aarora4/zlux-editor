@@ -48,8 +48,16 @@ var config = {
     ],
   },
   "node": {
-    "net": "empty"
+    "net": "empty",
+    "fs": 'empty',
+    "child_process": 'empty'
   },
+  "resolve": {
+    "alias": {
+        'vscode': require.resolve('monaco-languageclient/lib/vscode-compatibility')
+    }
+  },
+
   'plugins': [
     new CopyWebpackPlugin([{
         from: path.resolve(__dirname, './src/assets'),

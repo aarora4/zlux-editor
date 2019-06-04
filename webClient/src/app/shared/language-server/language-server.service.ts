@@ -14,7 +14,7 @@ import { MessageConnection } from 'vscode-jsonrpc';
 @Injectable()
 export class LanguageServerService {
 
-  config = { domain: 'ws://localhost:3000', endpoint: { hlasm: 'asmServer', json: 'jsonServer' } };
+  config = { domain: 'ws://localhost:8544', endpoint: { hlasm: 'asmServer', json: 'jsonServer', python: 'sampleServer' } };
   connections: { name: string, connection: MessageConnection }[] = [];
 
   constructor() { }
